@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+   <head lang="en">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Towson Tutoring</title>
+      <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+      <link href="style.css" rel="stylesheet" type="text/css" />
+   </head>
+   <body>
+      <main role="main">
+
+         <section role="nav bar">
+            <div class='center'>
+               <div class="topnav">
+                  <button class="home-button" id='home-button'>Home<i class=""></i></button>
+                  <h1>Towson Student Tutoring Services</h1>
+                  <a href="#login" id='login'>Account Management</a>
+               </div>
+            </div>
+         </section>
+
+         <section role="welcome section" class='app-section intro-center' id='welcome-section'>
+            <div class='content-wrapper center'>
+               <h1>Welcome! Let's get started...</h1>
+               <button class='quiz-button' id='start-button'>Enter</button>
+            </div>
+         </section>
+
+         <section role="quiz section" class='app-section flex-column' id='quiz-section' style='display:none'>
+         </section>
+
+         <section role="search bar" class="search-section" id='search-section' style='display:none'>
+            <form action="#">
+               <label for="search">Search Tutors</label>
+               <input type="text" id="search" placeholder="Math, English, Senior.." />
+               <input type="image" class="search-button magnifying-glass-icon" src="https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.4.6_challenge_design_to_code/magnifying-glass.png" alt="Search Button" role="button">
+            </form>
+            <nav class="pages">
+               <a class="pages-button">&lt;&lt; prev</a>
+               <span class="pages-display">1 to 4 of 179</span>
+               <a class="pages-button">next &gt;&gt;</a>
+            </nav>
+         </section>
+
+         <section role="filter section" class='filter-section flex-column' id='filter-section' style='display:none'>
+         </section>
+
+            <section id="login-section" role="login" class="m3" style='display:none'>
+            <section role="comparison" class="m3 signup-form">
+               <div class="reg-fieldset m3">
+                  <legend class="reg-legend">Login / Register</legend>
+                  <label for="user-email">Username</label>
+                  <input type="text" id="user-login"><br>
+                  <label for="user-password">Password</label>
+                  <input type="text" id="password-login"> 
+                  <fieldset class="reg-fieldset">
+                    <label for="degree-status">Degree Status</label><br>
+                    <input id="freshman" type="radio" name="answer" value="freshman">
+                    <label for="freshman">Freshman</label><br>
+                    <input id="sophmore" type="radio" name="answer" value="sophmore">
+                    <label for="sophmore">Sophmore</label><br>
+                    <input id="junior" type="radio" name="answer" value="junior">
+                    <label for="junior">Junior</label><br>
+                    <input id="senior" type="radio" name="answer" value="senior">
+                    <label for="senior">Senior</label><br>
+                </fieldset>
+                  <div>
+                     <p id="user-check" style='display:none'></p>
+                  </div>
+                  <div>
+                     <p id="password-check" style='display:none'></p>
+                  </div>
+                  <button type="submit" onClick="database_store()">Register</button>
+                  <button type="submit" onclick="database_check()">Login</button><br>
+                  <section id="tester"></section>
+               </div>
+            </section>
+         </section>
+         
+      </main>
+      <script src="//code.jquery.com/jquery.min.js"></script>
+      <script src="script.js"></script>
+      <script src="personal.js"></script>
+   </body>
+</html>
